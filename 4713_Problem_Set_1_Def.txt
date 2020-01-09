@@ -1,0 +1,451 @@
+host pg 28
+	Computing devices/servers that store and transmit information
+	with the internet. Run application programs.
+
+end system pg 28
+	Same as host
+	
+communication links pg 29
+	Made of different types of physical media
+	including coaxial cable, optic fiber, copper wire, and radio spectrum
+	
+packet switches pg 29, 30
+	Takes a packet arring on one of its incoming communication links
+	and forwards that packet on one of its outgoing communication links.
+	Routers and link-layer switches are two types of packet switches.
+	Facilitate the exchange of data among end systems, they are not 
+	concerned with the application that is the source or sink of data.
+
+transmission rate pg 30
+	Rate of transmitting data through communication links
+
+packet pg 30
+	Segments of data, each with a header byte, being sent from 
+	one end system to another
+	
+router pg 30
+	Forward packets toward their ultimate destinations.
+	Typically used in the network core.
+	
+link-layer switch pg 30
+	Forward packets toward their ultimate destinations.
+	Typically used in access networks.
+
+route pg 30
+	The sequence of communication links and packet switches traversed
+	by a packet from the sending end system to the recieving end
+	system
+
+path pg 30
+	Same as route
+	
+ISP (Internet Service Provider) pg 30
+	A network of packet switches and communication links.
+	Provide a variety of types of network access to end systems.
+	They also provide internet to content providers.
+	
+protocol pg 31, 33 - 35
+	A protocol defines the format and the order of 
+	messages exchanged between two or more communicating 
+	entities, as well as the actions taken on the transmission 
+	and/or receipt of a message or other event
+
+TCP (Transmission Control Protocol) pg 31
+	Provides reliable transport, control flow, cingestion control, does
+	not provide timing, minimum throughput guarantee, security, it is 
+	connection-oriented (setup required between client and server
+	processes).
+
+IP (Internet Protocol) pg 31
+	Specifies the format of the packets that are sent and recieved
+	among routers and end systems.
+
+internet standards pg 31
+	It's specifications that has been approved by the Internet
+	Engineering Task Force (IETF). Such standard helps to 
+	promote a consistent and universal use if the internet worldwide.
+
+RFC (Requests For Comments) pg 31
+	The Internet Engineering Task Force (IETF) standards documents.
+	Started out as general requests for comments to resolve network
+	and protocol design problems that faced the precursor of the 
+	internet. Tend to be quite technical and detailed.
+	They define protocols such as TCP, IP, HTTP, and SMTP.
+	
+distributed applications pg 31
+	Including Internet messaging, mapping with real-time road-traffic 
+	information, music streaming from the cloud, movie and television 
+	streaming, online social networks, video conferencing, 
+	multi-person games, and location-based recommendation systems
+	The applications are said to be distributed applications, since 
+	they involve multiple end systems that exchange data with 
+	each other.
+	
+API (Application Program Interface) pg 119 - 120
+	A socket is the interface between the application layer and the
+	transport layer within a host. It is also referred to as the API
+	between the application and the network, since the socket is 
+	the programming interface with which network applications are 
+	built.
+
+network protocols pg 34
+	The transmission and reciept of messages, and set of conventional
+	actions taken when these messages are sent and recieved. The
+	entities exchanging messages and taking actions are hardware 
+	or software components of some device.
+
+network edge pg 36
+	The end systems and the applications they run are considered to
+	be in the network edge. As opposed to the network core.
+
+clients pg 38
+	Host(end system).
+	Tend to be desktop and mobile PCs, smartphones, and so on.
+	
+servers pg 38
+	Hosts(end systems).
+	Tend to be more powerful machines that store and distribute Web
+	pages, stream video, relay e-mail, and so on.
+	Store and distribute content.
+	
+access networks pg 28
+	The network that physically connects an end system to the first
+	router on a path from the end system to any other distant end
+	system.
+	
+DSL (Digital Subscriber Line) pg 40 - 41
+	Internet access that makes use of the telco's existing 
+	local telephone infrastructure.
+	
+cable internet access pg 41
+	Makes use of the cable television company's existing cable
+	television infrastructure. Requires cable modems.
+	
+HFC (Hybrid Fiber Coax) pg 41
+	Both fiber and coaxial cable
+	
+FTTH (Fiber To The Home) pg 42
+	Provide an optical fiber path from the CO directly to the home.
+	
+Ethernet pg 43 - 44
+	A system for connecting a number of computer systems to form a
+	local area network, with protocols to control the passing of 
+	information and to avoid simultaneous transmission by two or 
+	more systems.
+	
+WiFi pg 43 - 44
+	Is a family of radio technologies commonly used for wireless
+	local area networking (WLAN) of devices.
+
+physical medium pg 45 - 46
+	can take many shapes and forms and does not have to be of 
+	the same type for each transmitter-receiver pair along the
+	path. Examples of physical media include twisted-pair 
+	copper wire, coaxial cable, multimode fiber-optic cable, 
+	terrestrial radio spectrum, and satellite radio spectrum.
+	Physical media fall into two categories: guided media and 
+	unguided media.
+
+guided media pg 46
+	the waves are guided along a solid medium, such as a 
+	fiber-optic cable, a twisted-pair copper wire, or a 
+	coaxial cable.
+
+unguided media pg 46
+	the waves propagate in the atmosphere and in outer 
+	space, such as in a wireless LAN or a digital satellite 
+	channel.
+
+UTP (Unshielded Twisted Pair) pg 46
+	commonly used for computer networks within a building,
+	that is, for LANs.
+
+coaxial cable pg 47
+	Consists of two copper conductors (like twisted pair).
+	Can achieve high data transmission rates.
+
+shared medium pg 47
+	A number of end systems can be connected directly to the 
+	coaxial cable, with each of the end systems receiving whatever
+	is sent by the other end systems
+
+fiber optics pg 47
+	A thin, flexible medium that conducts pulses of light, with each
+	pulse representing a bit. A single optical fiber can support 
+	tremendous bit rates, up to tens or even hundreds of gigabits per
+	second. They are immune to electromagnetic interference, have 
+	very low signal attenuation up to 100 kilometers, and are very 
+	hard to tap.
+
+terrestrial radio pg 47 - 48
+	can be broadly classified into three groups: those that operate
+	over very short distance (e.g., with one or two meters); those
+	that operate in local areas, typically spanning from ten to a
+	few hundred meters; and those that operate in the wide area, 
+	spanning tens of kilometers.
+
+satellite radio pg 48
+	A communication satellite links two or more Earth-based microwave
+	transmitter/ receivers, known as ground stations. The satellite
+	receives transmissions on one frequency band, regenerates the 
+	signal using a repeater, and transmits the signal on another 
+	frequency. Two types of satellites are used in 
+	communications: geostationary satellites and LEO satellites.
+
+geostationary satellite pg 48
+	Permanently remain above the same spot on Earth. This stationary 
+	presence is achieved by placing the satellite in orbit at 
+	36,000 kilometers above Earth’s surface. This huge distance
+	from ground station through satellite back to ground station 
+	introduces a substantial signal propagation delay of 
+	280 milliseconds. Nevertheless, satellite links, which can operate
+	at speeds of hundreds of Mbps, are often used in areas without 
+	access to DSL or cable-based Internet access.
+
+LEO satellite (Low-Earth Orbiting Satellite) pg 48
+	Are placed much closer to Earth and do not remain permanently 
+	above one spot on Earth. They rotate around 
+	Earth (just as the Moon does) and may communicate with each 
+	other, as well as with ground stations. To provide continuous 
+	coverage to an area, many satellites need to be placed in orbit. 
+	There are currently many low-altitude communication systems in 
+	development. LEO satellite technology may be used for Internet 
+	access sometime in the future
+
+messages pg 50
+	Can contain anything the application designer wants. 
+	May perform a control function or can contain data.
+	
+store-and-forward pg 50
+	means that the packet switch must receive the entire packet 
+	before it can begin to transmit the first bit of the packet 
+	onto the outbound link.
+	
+output buffer pg 51
+	Stores packet that the router is about to send into a link
+
+output queue pg 51
+	Same as output buffer
+	
+queuing delays pg 51
+	If an arriving packet needs to be transmitted onto a link but 
+	finds the link busy with the transmission of another packet, the 
+	arriving packet must wait in the output buffer.
+	
+packet loss pg 52
+	Either the arriving packet or one of the already-queued packets 
+	will be dropped. Occurs when the output buffer is completely full.
+	
+forwarding table pg 53
+	each router has a forwarding table that
+	maps destination addresses (or portions of the destination 
+	addresses) to that router’s outbound links.
+	When a packet arrives at a router, the router examines the 
+	address and searches its forwarding table, using this destination
+	address, to find the appropriate outbound link. The router then 
+	directs the packet to this outbound link.
+
+circuit switching pg 54
+	The resources needed along a path (buffers, link transmission rate)
+	to provide for communication between the end systems are reserved 
+	for the duration of the communication session between the end 
+	systems.
+	
+packet switching pg 54
+	The resources needed along a path (buffers, link transmission rate)
+	to provide for communication between the end systems are NOT
+	reserved for the duration of the communication session between 
+	the end systems.
+	
+circuit pg 54
+	Connection for which the switches on the path between the
+	sender and receiver maintain connection state for that connection.
+	
+end-to-end connection pg 54
+	Uses a circuit-switched network to directly connect two users
+	
+FDM (Frequency-Division Multiplexing) pg 55 - 56
+	With FDM, the frequency spectrum of a link is divided up among 
+	the connections established across the link. Specifically, the
+	link dedicates a frequency band to each connection for the
+	duration of the connection.
+	With FDM, each circuit continuously gets a fraction of the 
+	bandwidth.
+
+TDM (Time-Division Multiplexing) pg 55 - 56
+	For a TDM link, time is divided into frames of fixed duration, 
+	and each frame is divided into a fixed number of time slots. 
+	When the network establishes a connection across a link, the 
+	network dedicates one time slot in every frame to this connection.
+	These slots are dedicated for the sole use of that connection, 
+	with one time slot available for use (in every frame) to transmit
+	the connection’s data.
+	With TDM, each circuit gets all of the bandwidth periodically 
+	during brief intervals of time (that is, during slots)
+
+bandwidth pg 55
+	The width of the frequency band.
+	
+silent periods pg 56
+	A time when nothing is needed or requested. Most wasteful time
+	period when resources were already reserved during it.
+	
+customer pg 59
+	Pays provider for access
+	
+provider pg 59
+	Provides access to a customer
+	
+regional ISP pg 59
+	In reality, although some ISPs do have impressive global coverage
+	and do directly connect with many access ISPs, no ISP has presence
+	in each and every city in the world. Instead, in any given region,
+	there may be a regional ISP to which the access ISPs in the region
+	connect. Each regional ISP then connects to tier-1 ISPs.
+	
+tier-1 ISP pg 59
+	Tier-1 ISPs are similar to our (imaginary) global transit ISP; 
+	but tier-1 ISPs, which actually do exist, do not have a presence
+	in every city in the world. There are approximately a dozen 
+	tier-1 ISPs, including Level 3 Communications, AT&T, Sprint, 
+	and NTT.
+	
+PoP for ISP (Point of Presence) pg 60
+	is simply a group of one or more routers (at the same location)
+	in the provider’s network where customer ISPs can connect into 
+	the provider ISP.
+	
+multi-homed ISP pg 60
+	To connect to two or more provider ISPs.
+	When an ISP multi-homes, it can continue to send and receive
+	packets into the Internet even if one of its providers has a 
+	failure.
+	
+peer pg 60
+	To reduce these costs, a pair of nearby ISPs at the same level 
+	of the hierarchy can peer, that is, they can directly connect 
+	their networks together so that all the traffic between them 
+	passes over the direct connection rather than through upstream
+	intermediaries.
+	
+IXP (Internet Exchange Points) pg 60
+	A meeting point where multiple ISPs can peer together.
+	
+content provider networks pg 60 - 61
+	Google is an example of one.
+	Content providers are customers of lower-tier ISPs.
+	
+nodal processing delay pg 62 - 63
+	The time required to examine the packet’s header and determine 
+	where to direct the packet is part of the processing delay. 
+	The processing delay can also include other factors, such as the
+	time needed to check for bit-level errors in the packet that 
+	occurred in transmitting the packet’s bits from the upstream
+	node to router A.
+	
+queuing delay pg 63
+	At the queue, the packet experiences a queuing delay as it waits
+	to be transmitted onto the link. The length of the queuing delay
+	of a specific packet will depend on the number of earlier-arriving
+	packets that are queued and waiting for transmission onto the link.
+	If the queue is empty and no other packet is currently being 
+	transmitted, then our packet’s queuing delay will be zero. On the
+	other hand, if the traffic is heavy and many other packets are 
+	also waiting to be transmitted, the queuing delay will be long.
+	transmission delay
+	
+propagation delay pg 64
+	The time required to propagate from the beginning of the link to 
+	the next router.
+	
+total nodal delay pg 62
+	The total of adding nodal processing delay, queuing delay,
+	transmission delay, and propagation delay
+	
+traffic intensity pg 66
+	La/R
+	La = The average rate at which bits arrive at the queue
+	R = transmission Rate
+	Plays an important role in estimating the extent of the 
+	queuing delay.
+	
+packet drop pg 68
+	The packet is not kept or placed into a queue because it is full.
+	
+packet loss pg 68
+	Same as packet drop
+	From an end-system viewpoint, a packet loss will look like a 
+	packet having been transmitted into the network core but never
+	emerging from the network at the destination.
+	
+traceroute pg 69
+	a simple program that can run in any Internet host. When the 
+	user specifies a destination hostname, the program in the source
+	host sends multiple, special packets toward that destination. 
+	As these packets work their way toward the destination, they pass
+	through a series of routers. When a router receives one of 
+	these special packets, it sends back to the source a short
+	message that contains the name and address of the router.
+	
+instantaneous throughput pg 71
+	The rate (in bits/sec) at which the target host is receiving 
+	the file.
+	
+average throughput pg 71
+	If the file consists of F bits and the transfer takes T seconds 
+	for the target host to receive all F bits, then the average 
+	throughput of the file transfer is F/T bits/sec.
+	
+bottleneck link pg 72
+	two-link network, the throughput is min{R , R }, that is, 
+	it is the transmission rate of the bottleneck link
+	
+layered architecture pg 75 - 77
+	Each layer provides its service by (1) performing certain actions
+	within that layer and by (2) using the services of the layer 
+	directly below it
+
+service model pg 77
+	the services that a layer offers to the layer above
+	
+internet protocol stack pg 78
+	consists of five layers: the physical, link, network, 
+	transport, and application layers
+	
+ISO OSI protocol stack 
+	(ISO = International Organization for Standardization)
+	(OSI = Open Systems Interconnections)
+	The seven layers that he computer networks are organized around.
+	The seven layers of the OSI reference model are: application 
+	layer, presentation layer, session layer, transport layer, 
+	network layer, data link layer, and physical layer.
+	
+application-layer message pg 78 ,82
+	The message an application sends from the end system
+	Is where network applications and their application-layer 
+	protocols reside.
+	
+transport-layer segment pg 79, 82
+	The application-layer message and the transport-layer header 
+	information together constitute the transportlayer
+	segment
+
+network-layer datagram pg 79, 82
+	The transport layer then passes the segment to the network 
+	layer, which adds network-layer header information such as 
+	source and destination end system addresses, creating a 
+	network-layer datagram.
+	Is responsible for moving network-layer packets known as 
+	datagrams from one host to another.
+	
+link-layer frame pg 70 - 80, 82
+	The datagram is then passed to the link layer, 
+	which (of course!) will add its own link-layer header 
+	information and create a link-layer frame.
+	Link layer delivers the datagram to the next node along the route.
+	At this next node, the link layer passes the datagram up to the 
+	network layer.
+	Link-layer packets = frames 
+	
+payload field pg 82
+	Typically a packet from the layer above.

@@ -1,0 +1,388 @@
+application architecture
+	Dictates how the application is structured over the various
+	end systems.
+
+client-server
+	Architecture where there is an always-on host, called the server,
+	which services requests from many other hosts, called clients.
+
+data center
+	A large group of networked computer servers typically used by
+	organizations for the remote storage, processing, or distribution
+	of large amounts of data.
+
+P2P
+	Architecture where there is direct communication between pairs
+	of intermittently connected hosts.
+	Peer to Peer.
+
+self-scalability
+	The ability for an application architecture to increase in 
+	workload capacity automatically. P2P: users request files but
+	also share files.
+
+ISP friendly
+	Most ISP have been designed to have high downstream and low
+	upstream rates, but P2P puts the stress of file sharing on 
+	themselves (users) instead of dedicated servers. 
+	P2P is not ISP friendly. Puts more load on upstream rates. 
+
+P2P security
+	Because of their highly distributed and open nature, P2P
+	applications can be a challenge to secure.
+
+P2P incentives
+	 The success of future P2P applications also depends on 
+	 convincing user to volunteer bandwidth, storage, and 
+	 computation resources to the applications, which is the 
+	 challenge of incentive design.
+
+messages
+	The packet of information exchanged between an application at one
+	end and an application at the other end in the system.
+
+API
+	Application Programming Interface
+	A set of rules ('code') and specifications that software 
+	programs can follow to communicate with each other.
+
+IP address
+	32-bit quantity that uniquely identifies a host.
+
+port number
+	Number used to identify the receiving process.
+
+reliable data transfer
+	A protocol that provides a guaranteed data delivery service
+
+loss-tolerant applications
+	Can tolerate some amount of data loss.
+	Occasional loss only causes occasional glitches and these
+	losses can often be partially or fully concealed.
+
+bandwidth-sensitive apps
+	Applications that have throughput requirements.
+
+elastic applications
+	Can make use of as much, or as little, throughput as
+	happens to be available.
+
+TCP connection
+	The connection is a full-duplex connection that two 
+	processes can send messages to each other over the 
+	connection at the same time. Services provided:
+	Reliable transport between sending and receiving process.
+	Flow control: sender won't overwhelm receiver.
+	Congestion control: throttle sender when network overloaded.
+	Does not provide: timing, minimum throughput guarantee, security.
+	Connection-oriented: setup required between client and 
+	server processes.
+
+UDP
+	Does no provide: reliability, flow control, congestion control,
+	timing, throughput guarantee, security, or connection setup.
+
+application-layer protocol
+	Defines how an application's processes, running on different 
+	end systems, pass messages to each other.
+
+HTTP
+	Hyper Text Transfer Protocol
+	Defines the structure of messages and how the client 
+	server exchange those messages.
+
+web page
+	Consists of objects. An object is simply a file - such as
+	a HTML file, a JPEG image, a Java applet, or a video clip - 
+	that is addressable by a single URL
+
+HTML file
+	References the other objects in the page with the objects' URLs
+
+web browser
+	Implements the client side of HTTP.
+	e.g. Firefox and Internet Explorer
+
+web server
+	Implements the server side of HTTP, house web objects, each 
+	addressable by a URL.
+
+stateless protocol
+	HTTP servers maintain no information about the clients, hence
+	HTTP is said to be a stateless protocol. For example, if a 
+	client requests for an image, and 2 seconds later it request 
+	the same image again the server will return the image object
+	because it does not remember serving it two seconds ago.
+
+non-persistent connection
+	Each request/response pair be sent over a separate TCP connection.
+
+persistent connection
+	All of the requests and corresponding responses be sent over the
+	same TCP connection.
+
+RTT
+	Round-Trip Time
+	The time it takes for a small packet to travel from client to
+	server and then back to the client.
+
+request message
+	A message sent from the client to the server requesting 
+	some object.
+
+request line
+	The first line of an HTTP request message. Has three 
+	fields: the method field, the URL field, and the HTTP 
+	version field. The method field can take on several different
+	values, including GET, POST, HEAD, PUT, and DELETE. The GET 
+	method is used when a browser requests an object, with the 
+	requested object identified in the URL field.
+
+header lines
+	The subsequent lines after the request line of an HTTP request 
+	message.
+
+response message
+	The response to a request message served by the server. Has 
+	three section: an initial status line, six header lines, and 
+	then the entity body.
+
+status line
+	Has three fields: the protocol version field, a status code, 
+	and a corresponding status/message.
+
+header line
+	A field that describes a client request/ server response message.
+	
+entity body
+	The main part of the response message - it contains the 
+	requested object itself.
+	
+cookies
+	Allows servers to keep track of its users, either it 
+	permit/forbid access or serve content as a function of the 
+	user identity. 
+
+set-cookie
+	Header which contains the identification number of the cookie.
+
+web cache
+	Has its own disk storage and keeps copies of recently requested
+	objects in this storage. 
+
+proxy server
+	A server that acts as an intermediary for requests from clients
+	seeking resources from other servers.
+
+conditional GET
+	Request message is a so-called conditional GET message 
+	if (1) the request message uses the GET method and (2) the 
+	request message includes an If-Modified-Since: header line. 
+	This conditional GET is telling the server to send the object
+	only if the object has been modified since the specified date.
+
+if-modified-since
+	A header line used to request a response from the server if an 
+	object has been modified since a parameterized given date.
+
+control connection
+	One of the parallel TCP connections used by FTP to 
+	transfer a file. 
+	It is used for sending control information between the 
+	two hosts==information such as user identification, password,
+	commands to change remote directory, and commands to "put" and
+	"get" files.
+	
+data connection
+	One of the parallel TCP connections used by FTP to 
+	transfer a file. 
+	The data connection is used to actually send a file.
+	
+out-of-band
+	Use of a separate control connection.
+	Because FTP uses a separate control connection, FTP is said 
+	to send its control information out-of-band.
+	
+in-band
+	HTTP sends request and response header lines into the same 
+	TCP connection that carries the transferred file itself. For 
+	this reason, HTTP is said to send its control information in-band.
+
+state
+	In particular, the server must associate the control connection 
+	with a specific user account, and the server must keep track of 
+	the user's current directory as the user wanders about the remote
+	directory tree.
+	During a session, the FTP server must maintain state about the 
+	user. The Server must associate the control connection with a 
+	specific user account, and the server must keep track of the 
+	user's current directory as the user wanders about the remote 
+	directory tree.
+	
+USER
+	FTP Command: USER = username: used to send the user identification
+	to the server
+
+PASS
+	FTP Command: PASS password: used to send the user password
+	to the server
+
+LIST
+	FTP Command: Used to ask the server to send back a list of 
+	all the files in the current remote directory.
+	
+RETR
+	FTP Command: RETR filename: Used to retrieve (that is, get) a 
+	file from the current directory of the remote host. This command
+	causes the remote host to initiate a data connection and to send 
+	the requested file over the data connection.
+
+STOR
+	Used to store(that is, put) a file into the current directory 
+	of the remote host.
+
+user agents
+	Allow users to read, reply to, forward, save, and compose
+	messages. e.g. Microsoft Outlook and Apple Mail
+
+mail servers
+	Used to store and send messages.
+	
+SMTP
+	Simple Mail Transfer Protocol
+	Provides for the transfer of e-mail messages.
+	The principal application-layer protocol for electronic mail
+
+mailbox
+	Manages and maintains the messages that have been sent to a 
+	user. Located inside the mail server.
+
+message queue
+	A queue of messages sent between applications. It includes
+	sequence of work objects that are waiting to be processed.
+	A place in a mail server, where messages ready to be sent 
+	or resent are stored.
+
+SMTP handshake
+	The principal application-layer protocol for Internet 
+	electronic mail. It uses TCP to transfer mail from the 
+	sender's mail server to the recipient's mail server. Has
+	two sides: a client side, which executes on the sender's
+	mail server, and a server side, which executes on the 
+	recipient's mail server.
+	Three phases of transfer: handshaking(greeting), 
+	transfer of messages, and closure
+
+HELO
+	Sent by a client to identify itself, usually with a domain name.
+
+MAIL FROM
+	Identifies the sender of the message.
+
+RCPT TO
+	Identifies the message recipients.
+
+DATA
+	Sent by a client to initiate the transfer of message content.
+
+QUIT
+	Command to close the TCP connection
+
+mail message formats
+	Emails have a header with the following information:
+	From: <user email>
+	To: <receiving email>
+	Subject: <w/e>
+	<Blank line>
+	<Body of message>
+
+From
+	The email address of the sender.
+	
+To
+	The email address of the recipient.
+	
+Subject
+	A short summary of what the message is about.
+	
+POP3
+	Post Office Protocol - Version 3
+	A mail access protocol used to transfer mail from the 
+	recipient's mail server to the recipient's user agent.
+
+user
+	Username keyword used in POP3.
+	user <username>
+
+pass
+	Password keyword used in POP3.
+	pass <password>
+
+list
+	POP3 Protocol Transaction Phase: list message numbers
+
+retr
+	POP3 Protocol Transaction Phase: retrieve message by number
+
+dele
+	POP3 Protocol Transaction Phase: mark a message for deletion
+
+quit
+	POP3 Protocol Transaction Phase: finish the transaction phase
+
+IMAP
+	Internet Mail Access Protocol
+	keeps all messages in one place: at server. Allows user to
+	organize messages in folders. Keeps user state across 
+	sessions: names of folders and mappings between message IDs
+	and folder name.
+
+socket
+	One endpoint of a two-way communication link between two
+	programs running on the network.
+
+UDP
+	Connectionless and sends independent packets of data from one 
+	end system to the other, without any guarantees about delivery.
+	
+socket()
+	The first parameter indicates the address family; in particular, 
+	AF_INET indicates that the underlying network is using IPv4. 
+	The second parameter indicates that the socket is of type 
+	SOCK_DGRAM, which means it is a UDP socket
+	
+sendto()
+	Attaches the destination address (serverName, serverPort) to 
+	the message and sends the resulting packet into the process's
+	socket, clientSocket.
+	
+recvfrom()
+	Method to extract the clientside (source) port number from
+	the segment it receives from the client.
+	
+close()
+	Closes the socket and terminates the process.
+	
+bind()
+	Assigns the port number 12000 to the server's socket
+
+connect()
+	Initiates the TCP connection between the client and server. 
+	The parameter of the connect() method is the address of the 
+	server side of the connection.
+
+send()
+	Sends the string sentence through the client's socket and 
+	into the TCP connection.
+	
+recv()
+	Receives characters from the server port specified in parameter.
+	
+listen()
+	This line has the server listen for TCP connection requests
+	from the client. The parameter specifies the maximum number 
+	of queued connections (at least 1).
+
+accept()
+	Accepts a TCP/UDP connection.
+	Preferred content type?(Accept)
